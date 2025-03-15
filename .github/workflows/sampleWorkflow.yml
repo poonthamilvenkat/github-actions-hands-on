@@ -5,7 +5,7 @@ on:
         - main
   workflow_dispatch:
 jobs:
-  test-job:
+  test-job1:
     runs-on: ubuntu-latest
     steps: 
       - name: Print "Description"
@@ -19,6 +19,7 @@ jobs:
       - name: Conclude the Job
         run: echo "First job executed"
   test-job2:
+    needs: test-job1
     runs-on: ubuntu-latest
     steps:
       - name: Print Job Description
