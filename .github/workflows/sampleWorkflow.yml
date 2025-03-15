@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Print "Description"
-      - run: echo "Hands-On for first GitHub Actions workflow" //command line command
+        run: echo "Hands-On for first GitHub Actions workflow" //command line command
       - name: Conclude the Job
-      - run: echo "First step executed"
+        run: echo "First step executed"
