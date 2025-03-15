@@ -1,10 +1,19 @@
 name: firstWorkflow
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+        - main
 jobs:
-  first-job:
+  test-job:
     runs-on: ubuntu-latest
     steps: 
       - name: Print "Description"
         run: echo "Hands-On for first GitHub Actions workflow" //command line command
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18
       - name: Conclude the Job
-        run: echo "First step executed"
+        run: echo "First job executed"
